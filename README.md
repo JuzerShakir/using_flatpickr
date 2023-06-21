@@ -1,24 +1,34 @@
-# README
+## Flatpickr
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Getting Started](https://flatpickr.js.org/getting-started/)
+[Examples](https://flatpickr.js.org/examples/)
 
-Things you may want to cover:
+Commands executed in the following order:
 
-* Ruby version
+```bash
+rails new using_flatpickr
+```
 
-* System dependencies
+```bash
+bin/importmap pin flatpickr
+```
 
-* Configuration
+**Add the following lines in the `application.html.erb` file to execute flatpickr**
 
-* Database creation
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+```
 
-* Database initialization
+```bash
+rails g scaffold event name start_time:datetime end_time:datetime
+```
 
-* How to run the test suite
+```bash
+rails g stimulus flatpickr
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**See `flatpickr_controller.js` file for modification of date_time attributes**
